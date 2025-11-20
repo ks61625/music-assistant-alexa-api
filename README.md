@@ -2,7 +2,7 @@
 `docker build -t ks61625/music-assistant-alexa-api .`
 
 # use this image
-`
+```yaml
 services:
   music-assistant-server:
     image: ks61625/music-assistant-alexa-api
@@ -11,7 +11,7 @@ services:
     environment:
       - USERNAME=admin
       - PASSWORD=test
-`
+```
 
 
 # Music Assistant Alexa API
