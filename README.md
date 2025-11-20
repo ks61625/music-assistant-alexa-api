@@ -1,3 +1,19 @@
+# Build this image (to support arm64/v8)
+`docker build -t ks61625/music-assistant-alexa-api .`
+
+# use this image
+`
+services:
+  music-assistant-server:
+    image: ks61625/music-assistant-alexa-api
+    container_name: music-assistant-alexa-api
+    restart: no
+    environment:
+      - USERNAME=admin
+      - PASSWORD=test
+`
+
+
 # Music Assistant Alexa API
 
 This project provides a simple REST API bridge between [Music Assistant](https://github.com/music-assistant) and an Alexa skill. It allows Music Assistant to push a stream URL, which can then be fetched by an Alexa skill.
